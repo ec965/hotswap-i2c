@@ -12,3 +12,5 @@ Master SCL -> SCLIN            SCLOUT -> Slave SCL
 ```
 
 Pullup resistors are required on both sides on the I2C bus.
+
+![pcb](image.png)
