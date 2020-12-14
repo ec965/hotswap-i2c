@@ -71,7 +71,7 @@ Wire Wire Line
 	3900 2050 3900 1900
 Connection ~ 3900 1900
 Wire Wire Line
-	3900 1900 5550 1900
+	3900 1900 4200 1900
 Wire Wire Line
 	3900 2350 3900 2650
 Wire Wire Line
@@ -107,25 +107,14 @@ Text GLabel 5550 2550 2    50   Input ~ 0
 SCLOUT
 Text GLabel 5550 2650 2    50   Input ~ 0
 SDAOUT
-Text GLabel 2600 3000 2    50   Input ~ 0
+Text GLabel 2600 2950 2    50   Input ~ 0
 SDAOUT
-Text GLabel 2600 2900 2    50   Input ~ 0
+Text GLabel 2600 2850 2    50   Input ~ 0
 SCLOUT
 Text GLabel 2600 2300 2    50   Input ~ 0
 SDAIN
 Text GLabel 2600 2200 2    50   Input ~ 0
 SCLIN
-$Comp
-L Connector:Conn_01x02_Male J2
-U 1 1 5FD83AF1
-P 2400 2900
-F 0 "J2" H 2508 3081 50  0000 C CNN
-F 1 "Conn_01x02_Male" H 2508 2990 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2400 2900 50  0001 C CNN
-F 3 "~" H 2400 2900 50  0001 C CNN
-	1    2400 2900
-	1    0    0    -1  
-$EndComp
 Text GLabel 2600 2100 2    50   Input ~ 0
 VCC
 Connection ~ 5550 1900
@@ -147,17 +136,6 @@ F 3 "" H 2850 2400 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5550 3300 5550 3150
-$Comp
-L Connector:Conn_01x04_Male J1
-U 1 1 5FD6FF4C
-P 2400 2200
-F 0 "J1" H 2508 2481 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 2508 2390 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 2400 2200 50  0001 C CNN
-F 3 "~" H 2400 2200 50  0001 C CNN
-	1    2400 2200
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2600 2400 2850 2400
 $Comp
@@ -173,4 +151,69 @@ F 3 "" H 5550 3300 50  0001 C CNN
 $EndComp
 Text GLabel 6200 2350 2    50   Input ~ 0
 VCC
+$Comp
+L Connector:Conn_01x04_Male J1
+U 1 1 5FD6FF4C
+P 2400 2200
+F 0 "J1" H 2508 2481 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 2508 2390 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 2400 2200 50  0001 C CNN
+F 3 "~" H 2400 2200 50  0001 C CNN
+	1    2400 2200
+	1    0    0    -1  
+$EndComp
+Text GLabel 2600 2750 2    50   Input ~ 0
+VCC
+$Comp
+L power:GND #PWR01
+U 1 1 5FD6D635
+P 2850 3050
+F 0 "#PWR01" H 2850 2800 50  0001 C CNN
+F 1 "GND" H 2855 2877 50  0000 C CNN
+F 2 "" H 2850 3050 50  0001 C CNN
+F 3 "" H 2850 3050 50  0001 C CNN
+	1    2850 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 3050 2850 3050
+$Comp
+L Connector:Conn_01x04_Male J2
+U 1 1 5FD6D63C
+P 2400 2850
+F 0 "J2" H 2508 3131 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 2508 3040 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 2400 2850 50  0001 C CNN
+F 3 "~" H 2400 2850 50  0001 C CNN
+	1    2400 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5FD6BC2E
+P 4200 2050
+F 0 "C2" H 4315 2096 50  0000 L CNN
+F 1 "0.01uF" H 4315 2005 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4238 1900 50  0001 C CNN
+F 3 "~" H 4200 2050 50  0001 C CNN
+	1    4200 2050
+	1    0    0    -1  
+$EndComp
+Connection ~ 4300 1900
+Wire Wire Line
+	4300 1900 5550 1900
+$Comp
+L power:GND #PWR0104
+U 1 1 5FD6CB04
+P 4200 2200
+F 0 "#PWR0104" H 4200 1950 50  0001 C CNN
+F 1 "GND" H 4205 2027 50  0000 C CNN
+F 2 "" H 4200 2200 50  0001 C CNN
+F 3 "" H 4200 2200 50  0001 C CNN
+	1    4200 2200
+	1    0    0    -1  
+$EndComp
+Connection ~ 4200 1900
+Wire Wire Line
+	4200 1900 4300 1900
 $EndSCHEMATC
