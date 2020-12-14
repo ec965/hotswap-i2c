@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name TCA4311ADR)(type Legacy)(uri G:/Documents/Github/hotswap-i2c/TCA4311ADR/TCA4311ADR.lib)(options "")(descr ""))
+)
